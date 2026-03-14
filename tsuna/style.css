@@ -1,0 +1,252 @@
+/* -- Global rules -- */
+@import "../colors/tsuna.css";
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: rgba(34, 36, 54, 0.6);
+   /* background-color: transparent;*/
+}
+
+window#waybar.hidden {
+  opacity: 1;
+}
+
+/* - Genera rules for visible modules -- */
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#custom-media,
+#custom-cava,
+#song,
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio-slider,
+#network,
+#language,
+#custom-power,
+#power-menu,
+#hardware,
+#custom-hardware-display,
+#custom-reboot,
+#battery {
+  color: #161320;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+
+/* Separation to the left */
+#custom-archicon,
+#idle_inhibitor {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Separation to the rigth */
+#clock,
+#temperature,
+#custom-power {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* -- Specific styles -- */
+
+/* Modules left */
+#custom-archicon {
+  font-size: 20px;
+  color: @red;
+  background: @lightred;
+  padding-right: 17px;
+}
+
+#clock {
+  background: @lightred;
+  color: @red;
+}
+#custom-hardware-display {
+  background: @lightred;
+  color: @red;
+  border-radius: 10px;
+}
+#cpu {
+  background: @lightred;
+  color: @red;
+  margin-left: -4px;
+}
+
+#memory {
+  background: @lightred;
+  color: @red;
+}
+
+#disk {
+  background: @lightred;
+  color: @red;
+}
+
+#temperature {
+  background: @lightred;
+  color: @red;
+}
+#battery {
+  background: @lightred;
+  color: @red;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 6px;
+  font-size: 15px; 
+}
+#custom-cava {
+  background: @lightred;
+  color: @red;
+  border-radius: 10px;
+}
+#custom-media {
+  background: @lightred;
+  color: @red;
+  border-radius: 10px;
+}
+#song {
+  background: @lightred;
+  color: @red;
+  border-radius: 10px;
+}
+/* Modules center */
+#workspaces {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  color: #E8B5B5;
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #E3A1A1;
+}
+
+#workspaces button.active {
+  color: #FA8989;
+  text-shadow: 0 0 4px #ABE9B3;
+}
+
+#workspaces button:hover {
+  color: #FA8989;
+}
+
+#workspaces button.active:hover {}
+
+/* Modules right */
+/*#taskbar {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 6px 5px;
+}
+
+#taskbar button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+#taskbar button.active {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#taskbar button:hover {
+  background: rgba(34, 36, 54, 0.5);
+}*/
+#custom-reboot {
+  color: @red;
+  padding-right: 8px;
+  margin-left: -10px;
+}
+#power-menu {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: @lightred;
+  color: @red;
+}
+#hardware {
+  background: @lightred;
+  color: @red;
+  border-radius: 10px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+#idle_inhibitor {
+  background: @lightred;
+  color: @red;
+  padding-right: 15px;
+}
+
+#pulseaudio {
+  min-width: 55px;
+  color: @red;
+  background: @lightred;
+}
+
+#pulseaudio-slider {
+  color: @red;
+  background: @lightred;
+  min-width: 50px;
+}
+#pulseaudio-group {
+  color: @red;
+  background: @lightred;
+}
+/*#pulseaudio-slider slider {}*/
+
+
+#network {
+  background: @lightred;
+  color: @red;
+  padding-right: 13px;
+}
+#custom-power{
+  background: @lightred;
+  color: @red;
+  padding-right: 10px;
+}
+/*menu {
+	border-radius: 20px;
+	background: @lightred;
+	color: @red;
+}
+menuitem {
+	border-radius: 20px;
+}*/
+#language {
+  background: @lightred;
+  color: @red;
+  padding-right: 15px;
+}
+
+/* === Optional animation === */
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}

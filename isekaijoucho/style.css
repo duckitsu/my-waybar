@@ -1,0 +1,252 @@
+/* -- Global rules -- */
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: rgba(34, 36, 54, 0.6);
+   /* background-color: transparent;*/
+}
+
+window#waybar.hidden {
+  opacity: 1;
+}
+
+/* - Genera rules for visible modules -- */
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#custom-media,
+#custom-cava,
+#song,
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio-slider,
+#network,
+#language,
+#hardware,
+#power-menu,
+#custom-power,
+#custom-reboot,
+#custom-hardware-display,
+#battery {
+  color: #161320;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+
+/* Separation to the left */
+#custom-archicon,
+#idle_inhibitor {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Separation to the rigth */
+#clock,
+#temperature {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* -- Specific styles -- */
+
+/* Modules left */
+#custom-archicon {
+  font-size: 20px;
+  color: #2621B0;
+  background: #96CDFB;
+  padding-right: 17px;
+}
+
+#clock {
+  background: #96CDFB;
+  color: #2621B0;
+}
+#custom-hardware-display {
+  background: #96CDFB;
+  color: #2621B0;
+  border-radius: 10px;
+}
+#cpu {
+  background: #96CDFB;
+  color: #2621B0;
+  margin-left: -4px;
+}
+
+#memory {
+  background: #96CDFB;
+  color: #2621B0;
+}
+
+#disk {
+  background: #96CDFB;
+  color: #2621B0;
+}
+
+#temperature {
+  background: #96CDFB;
+  color: #2621B0;
+}
+#battery {
+  background: #96CDFB;
+  color: #2621B0;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 6px;
+  font-size: 15px; 
+}
+#custom-cava {
+  background: #96CDFB;
+  color: #2621B0;
+  border-radius: 10px;
+}
+#custom-media {
+  background: #96CDFB;
+  color: #2621B0;
+  border-radius: 10px;
+}
+#song { 
+  background: #96CDFB;
+  color: #2621B0;
+  border-radius: 10px;
+}
+/* Modules center */
+#workspaces {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  color: #B5E8E0;
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+#workspaces button.active {
+  color: #89B4FA;
+  text-shadow: 0 0 4px #ABE9B3;
+}
+
+#workspaces button:hover {
+  color: #89B4FA;
+}
+
+#workspaces button.active:hover {}
+
+/* Modules right */
+/*#taskbar {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 6px 5px;
+}
+
+#taskbar button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+#taskbar button.active {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#taskbar button:hover {
+  background: rgba(34, 36, 54, 0.5);
+}*/
+#custom-reboot {
+  margin-left: -10px;
+  padding-right: 8px;
+} 
+#power-menu {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #96CDFB;
+  color: #2621B0;
+}
+#hardware {
+  background: #96CDFB;
+  color: #2621B0;
+  border-radius: 10px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+#idle_inhibitor {
+  background: #96CDFB;
+  color: #2621B0;
+  padding-right: 15px;
+}
+
+#pulseaudio {
+  min-width: 55px;
+  color: #2621B0;
+  background: #96CDFB;
+}
+
+#pulseaudio-slider {
+  color: #2621B0;
+  background: #96CDFB;
+  min-width: 50px;
+}
+#pulseaudio-group {
+  color: #2621B0;
+  background: #96CDFB;
+}
+#pulseaudio-slider slider {}
+
+
+#network {
+  background: #96CDFB;
+  color: #2621B0;
+  padding-right: 13px;
+}
+#custom-power{
+  background: #96CDFB;
+  color: #2621B0;
+}
+#custom-reboot {
+  background: #96CDFB;
+  color: #2621B0;
+}
+/*menu {
+	border-radius: 20px;
+	background: #96CDFB;
+	color: #2621B0;
+}
+menuitem {
+	border-radius: 20px;
+}*/
+#language {
+  background: #96CDFB;
+  color: #2621B0;
+  padding-right: 15px;
+}
+
+/* === Optional animation === */
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}
